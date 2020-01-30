@@ -1,0 +1,12 @@
+        <div class="row">
+            {{form.user_name}}
+        </div>
+        <div class="row">
+    
+        </div>
+        <div class="row">
+            {{form.gender}}
+        </div>
+        <div class="row">
+            <input type="submit" value="درخواست کد">
+        </div>

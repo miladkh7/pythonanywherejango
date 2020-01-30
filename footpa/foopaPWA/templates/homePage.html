@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Milad</title>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+        <div class="row col-12 top-menu">
+            <div class="top-menu-items col-sm-4 col-4">
+
+                <div class="row">
+                    <div class="top-menu-items-button col-sm-4 col-4">
+
+                        <div class="">
+                            <svg class="mysvg" viewBox="0 0 80  50" xml:space="preserve">>
+                                <use xlink:href="#setting-menu-icon" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="top-menu-items-button col-sm-4 col-4">
+                        <div class="">
+                            <svg class="mysvg" viewBox="0 0 60  40" xml:space="preserve">>
+                                <use xlink:href="#profile-icon" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="top-menu-items-button col-sm-4 col-4">
+                        <div class="">
+                            <svg class="mysvg" viewBox="0 0 60  40" xml:space="preserve">>
+                                <use xlink:href="#notification-icon" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="top-menu-content col-sm-8 col-8" >
+                فوتبالیستا
+            </div>
+        </div>
+        <!-- start main section -->
+        <div class="main-home row col-12">
+            <!-- profile section  -->
+            <div class="main-home-profile-section row col-12">
+               <img class="main-home-profile-section-image" src="{{image.url}}" >
+               <h3 class ="main-home-profile-section-name" id="profile-name">{{name}}</h3>
+               <h4>سطح مبتدی</h4>
+               <h4 class="main-home-profile-section-level" >رتبه ۱</h4>
+
+            </div>
+
+
+            <div class="main-home-active-matchs row col-12"> 
+               <div class="row active-match col-12">
+                   <div class=" col-4 active-match-others" style="padding: 5px;">
+                    <img class="active-match-audince" src="./statics/profile(1).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(2).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(3).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(4).jpg" alt="لوگو تیم">
+                   </div>
+                   <div class="active-match-detail col-5" >
+                    <h1 class="active-match-name">اسم بازی</h1>
+                    <h2 class="active-match-team">استقالال تهران</h2 >
+                    <h3 class="active-match-time">زمان بازی</h3>
+                    
+                   </div>
+                   <div class="col-3">
+                    <img class="active-match-logo" src="./statics/perspolis.jpg" alt="لوگو تیم">
+                   </div>
+
+
+               </div>
+
+               <!-- game 2 -->
+                              <div class="row active-match col-12">
+                   <div class="active-match-others col-4 "  style="padding: 5px;">
+                    <img class="active-match-audince" src="./statics/profile(1).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(2).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(3).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(4).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/profile(5).jpg" alt="لوگو تیم">
+                    <img class="active-match-audince" src="./statics/milad.jpg" alt="لوگو تیم">
+                   </div>
+                   <div class="active-match-detail col-5" >
+                    <h1 class="active-match-name">اسم بازی</h1>
+                    <h2 class="active-match-team">استقالال تهران</h2 >
+                    <h3 class="active-match-time">زمان بازی</h3>
+                    
+                   </div>
+                   <div class="col-3">
+                    <img class="active-match-logo" src="./statics/perspolis.jpg" alt="لوگو تیم">
+                   </div>
+
+
+               </div>
+
+            </div>
+        </div>
+        <!-- end main section -->
+        <div class="row main-menu col-12">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-4 main-menu-button">
+                    <div class="home col-12">
+                        <a href="{% url 'homepage' %}">
+                            <svg class="mysvg" viewBox="0 -75 675  512" xml:space="preserve">>
+                                <!-- <use xlink:href="./icons.html#bike" /> -->
+                                <use xlink:href="#home-icon" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-4  main-menu-button">
+                    <div class="together col-12">
+                        <a href="{% url 'together' %}">
+                            <svg class="mysvg" viewBox="0 -11 48  38" xml:space="preserve">
+                                <!-- <use xlink:href="./icons.html#bike" /> -->
+                                <use xlink:href="#together-icon" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-4  main-menu-button">
+
+                    <div class="discover">
+                        <a href="{% url 'discover_matchs' %}">
+                            <svg class="mysvg" viewBox="-10 -5 48 40" xml:space="preserve">
+                                <use xlink:href="#discover-icon" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+    <!-- </div> -->
+</body>
+
+</html>
+<svg class="mysvg">
+    <symbol id="setting-menu-icon">
+        <defs>
+            <clipPath id="clip-path">
+                <rect width="7" height="28" fill="none" />
+            </clipPath>
+        </defs>
+        <g id="Repeat_Grid_3" data-name="Repeat Grid 3" clip-path="url(#clip-path)">
+            <g transform="translate(-237 -15)">
+                <circle id="Ellipse_1" data-name="Ellipse 1" cx="3" cy="3" r="3" transform="translate(237 16)"
+                    fill="#6e6e6e" />
+            </g>
+            <g transform="translate(-237 -6)">
+                <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="3" cy="3" r="3" transform="translate(237 16)"
+                    fill="#6e6e6e" />
+            </g>
+            <g transform="translate(-237 3)">
+                <circle id="Ellipse_1-3" data-name="Ellipse 1" cx="3" cy="3" r="3" transform="translate(237 16)"
+                    fill="#6e6e6e" />
+            </g>
+            <g transform="translate(-237 12)">
+                <circle id="Ellipse_1-4" data-name="Ellipse 1" cx="3" cy="3" r="3" transform="translate(237 16)"
+                    fill="#6e6e6e" />
+            </g>
+        </g>
+    </symbol>
+    <symbol id="profile-icon">
+        <g id="user" transform="translate(0.5 0.5)">
+            <path id="Path_5" data-name="Path 5" d="M138.091,1.578a5.389,5.389,0,1,1-7.621,0,5.389,5.389,0,0,1,7.621,0"
+                transform="translate(-124.85 0)" fill="none" stroke="#000" stroke-width="1" />
+            <path id="Path_6" data-name="Path 6"
+                d="M49.92,293.615a14.969,14.969,0,0,0-16.533,0,2.672,2.672,0,0,0-1.164,2.225v4.669H51.085V295.84A2.672,2.672,0,0,0,49.92,293.615Z"
+                transform="translate(-32.223 -278.953)" fill="none" stroke="#000" stroke-width="1" />
+        </g>
+    </symbol>
+    <symbol id="notification-icon">
+        <path id="Path_21" data-name="Path 21"
+            d="M46.067,8.659a.4.4,0,0,0,0,.8,2.554,2.554,0,0,1,2.551,2.551.4.4,0,0,0,.8,0A3.355,3.355,0,0,0,46.067,8.659Z"
+            transform="translate(-28.036 -5.707)" />
+        <path id="Path_22" data-name="Path 22"
+            d="M8.952,12.01a.4.4,0,1,0,.8,0A2.554,2.554,0,0,1,12.3,9.458a.4.4,0,0,0,0-.8A3.355,3.355,0,0,0,8.952,12.01Z"
+            transform="translate(-6 -5.708)" />
+        <path id="Path_23" data-name="Path 23"
+            d="M47.543,1.278a.4.4,0,1,0,0,.8A4.918,4.918,0,0,1,52.455,6.99a.4.4,0,0,0,.8,0A5.719,5.719,0,0,0,47.543,1.278Z"
+            transform="translate(-28.921 -1.278)" />
+        <path id="Path_24" data-name="Path 24"
+            d="M7.682,1.678a.4.4,0,0,0-.4-.4A5.718,5.718,0,0,0,1.571,6.99a.4.4,0,0,0,.8,0A4.917,4.917,0,0,1,7.283,2.078.4.4,0,0,0,7.682,1.678Z"
+            transform="translate(-1.571 -1.278)" />
+        <path id="Path_25" data-name="Path 25"
+            d="M25.993,22.508a.857.857,0,0,0-.265-.378c.009-.244.015-.489.015-.736,0-5.446-2.256-10.058-5.372-11.64a2.445,2.445,0,1,0-4.743,0c-3.116,1.582-5.372,6.194-5.372,11.64,0,.247.006.492.015.736a.857.857,0,0,0-.265.378L8.85,25.973a.866.866,0,0,0,.822,1.141h5.648a2.8,2.8,0,0,0,5.363,0H26.33a.866.866,0,0,0,.822-1.141ZM16,10.481l.578-.293-.155-.629a1.63,1.63,0,1,1,3.16,0l-.155.629.578.293c2.9,1.472,4.926,5.96,4.926,10.913q0,.251-.007.507H11.08q-.007-.256-.007-.507C11.073,16.44,13.1,11.953,16,10.481Zm2,17.833a2,2,0,0,1-1.832-1.2h3.665A2,2,0,0,1,18,28.314Zm8.384-2.027a.061.061,0,0,1-.054.028H9.671a.067.067,0,0,1-.063-.088l1.159-3.465a.067.067,0,0,1,.063-.046H25.171a.067.067,0,0,1,.063.046l1.159,3.465A.061.061,0,0,1,26.384,26.287Z"
+            transform="translate(-5.912 -4.545)" />
+
+    </symbol>
+    <symbol id="home-icon">
+        <g>
+            <path d="M268.662,35.005c-17.826-17.826-45.935-18.72-65.069-3.129c-1.284,1.04-2.609,1.943-3.804,3.129
+                L7.141,227.661c-9.527,9.519-9.519,24.963,0.008,34.481c1.187,1.187,2.479,2.235,3.829,3.129c4.056,2.682,8.738,4.016,13.42,4.016
+                s8.145-1.479,12.201-4.162c1.349-0.894,1.853-1.796,3.04-2.983l13.892-15.899v111.361c0,49.089,47.39,89.74,98.738,89.74h171.667
+                c50.316,0,87.252-39.814,87.252-89.74V250.388l13.762,11.762c4.755,4.763,12.006,7.145,18.241,7.145
+                c6.235,0,12.981-2.382,17.745-7.145c9.527-9.519,9.779-24.963,0.252-34.481L268.662,35.005z M362.417,357.604
+                c0,23.036-15.046,40.968-38.481,40.968H152.269c-24.483,0-49.966-18.712-49.966-40.968V197.471L230.295,69.487l132.122,132.122
+                V357.604z" />
+            <path d="M139.686,254.282c0,1.821,0.098,3.633,0.276,5.43c0.309,3.203,0.935,6.308,1.756,9.332
+                c0.138,0.512,0.244,1.032,0.398,1.544c0.122,0.398,0.26,0.78,0.39,1.171c15.607,49.983,91.804,89.065,91.804,89.065
+                s76.197-39.09,91.804-89.065c0.13-0.39,0.268-0.772,0.39-1.171c0.146-0.512,0.26-1.024,0.398-1.544
+                c0.821-3.024,1.447-6.129,1.756-9.332c0.179-1.796,0.276-3.609,0.276-5.43c0-30.954-25.093-56.055-56.055-56.055
+                c-14.957,0-28.507,5.893-38.562,15.444c-10.055-9.543-23.605-15.444-38.562-15.444
+                C164.787,198.227,139.686,223.32,139.686,254.282z" />
+    </symbol>
+    <symbol id="together-icon">
+        <g>
+            <path id="Path_5" data-name="Path 5" d="M138.091,1.578a5.389,5.389,0,1,1-7.621,0,5.389,5.389,0,0,1,7.621,0"
+                transform="translate(-124.85 0)" fill="none" stroke="#6e6e6e" stroke-width="1" />
+            <path id="Path_6" data-name="Path 6"
+                d="M49.92,293.615a14.969,14.969,0,0,0-16.533,0,2.672,2.672,0,0,0-1.164,2.225v4.669H51.085V295.84A2.672,2.672,0,0,0,49.92,293.615Z"
+                transform="translate(-32.223 -276.752)" fill="none" stroke="#6e6e6e" stroke-width="1" />
+            <path id="Path_5-2" data-name="Path 5" d="M134.954,1.04a3.552,3.552,0,1,1-5.023,0,3.552,3.552,0,0,1,5.023,0"
+                transform="translate(-103.797 8.101)" fill="none" stroke="#6e6e6e" stroke-width="1" />
+            <path id="Path_6-2" data-name="Path 6"
+                d="M43.886,292.767a9.865,9.865,0,0,0-10.9,0,1.761,1.761,0,0,0-.767,1.466v3.077H44.653v-3.077A1.761,1.761,0,0,0,43.886,292.767Z"
+                transform="translate(-9.792 -273.553)" fill="none" stroke="#6e6e6e" stroke-width="1" />
+
+        </g>
+
+    </symbol>
+    <symbol id="discover-icon">
+        <g id="safari" transform="translate(-108.5 2.5)">
+            <g id="Group_27" data-name="Group 27" transform="translate(109 -2)">
+                <path id="Path_45" data-name="Path 45"
+                    d="M16.033,0A16.033,16.033,0,1,0,32.067,16.033,16.052,16.052,0,0,0,16.033,0ZM6.013,26.054l7.45-11.175L17.188,18.6ZM18.6,17.188l-3.726-3.726,11.175-7.45Z"
+                    fill="none" stroke="#707070" stroke-width="1" />
+            </g>
+        </g>
+    </symbol>
+</svg>

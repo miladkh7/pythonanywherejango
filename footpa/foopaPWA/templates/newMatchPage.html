@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/persian-datepicker.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jquery-ptTimeSelect.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+    <script src= "{% static 'js/jquery.js' %}" ></script>
+    <script src="{% static 'js/persian-datepicker.js' %}"></script>
+    <script src="{% static 'js/persian-date.js' %}"></script>
+    <script src="{% static 'js/jquery-ptTimeSelect.js' %}"></script>
+    <title>Milad</title>
+</head>
+
+<body>
+    <div>
+        <div class="row col-12 top-menu">
+            <div class="top-menu-items col-sm-4 col-4">
+
+                <div class="row">
+                    <div class="top-menu-items-button col-sm-4 col-4">
+
+                        <div class="">
+                            <svg class="mysvg" viewBox="0 0 48  48" xml:space="preserve">>
+                                <use xlink:href="#setting-menu-icon" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="top-menu-content col-sm-8 col-8">
+                رقابت ها
+            </div>
+        </div>
+        <!-- start main section -->
+
+        <div class="row col-12 new-match">
+
+            <div class="new-match-info row col-12">
+
+                <form action="{% url 'create_match_request' %}" method="post">{% csrf_token %}
+                    <div class="row  new-match-info-parameter col-12">
+                        <div class="col-6">
+                            <select class="input-field form-control form-control-sm" id="" style=" direction: rtl;">
+                                <option value="in-door">سالن</option>
+                                <option value="out-door">چمن</option>
+                            </select>
+                        </div>
+                        <div class="col-6">نوع زمین</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+                        <div class="col-6">
+                            <select class="input-field form-control form-control-sm" name="match-type" id=""
+                                style=" direction: rtl;">
+                                <option value="friendly">دوستانه</option>
+                                <option value="formal">رسمی</option>
+                            </select>
+                        </div>
+                        <div class="col-6">نوع بازی</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+                        <div class="col-6">
+                            <select class="form-control form-control-sm" name="match-length" id=""
+                                style=" direction: rtl;">
+                                <option value="60">60 دقیقه</option>
+                                <option value="90">90 دقیقه</option>
+                            </select>
+                        </div>
+                        <div class="col-6"> مدت سانس</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+                        <div class="col-6">
+                            <select class="form-control form-control-sm" name="match-player-no" id=""
+                                style=" direction: rtl;">
+                                <option value="6">6 نفره</option>
+                                <option value="7">7 نفره</option>
+                            </select>
+                        </div>
+                        <div class="col-6">چند به چند</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+                        <div class="col-6">
+                            <!-- <input class="form-control form-control-sm jdate"  name="match-date" id=""> -->
+
+                            <input class="form-control form-control-sm myjdate"  name="match-date" id="">
+                        </div>
+                        <div class="col-6">تاریخ</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+                        <div class="col-6">
+                            <input class="form-control form-control-sm"  name="match-time" id="" value="18:30 Am">
+                        </div>
+                        <div class="col-6">زمان بازی</div>
+
+                    </div>
+                    <div class="row col-12  new-match-info-parameter">
+
+                        <div class="col-6">
+                            <input class="form-control form-control-sm" type="text" name="match-place" id="">
+                        </div>
+                        <div class="col-6">مکان بازی</div>
+                    </div>
+
+                    <div class="row col-12  new-match-info-action">
+                        <button class="request-button" type="submit">ایجاد بازی</button>
+                    </div>
+
+
+                </form>
+
+
+
+
+            </div>
+
+
+
+        </div>
+        <!-- end main section -->
+        <div class="row col-12 new-match-shematic">
+            <img class="new-match-shematic-field" src="{% static 'fieldview.png' %}" alt="">
+            <img class="new-match-shematic-player" id="player1" src="./statics/profile(1).jpg" alt="آواتار بازیکن">
+            <img class="new-match-shematic-player" id="player2" src="./statics/profile(2).jpg" alt="آواتار بازیکن">
+            <img class="new-match-shematic-player" id="player3" src="./statics/profile(3).jpg" alt="آواتار بازیکن">
+            <img class="new-match-shematic-player" id="player4" src="./statics/profile(4).jpg" alt="آواتار بازیکن">
+            <img class="new-match-shematic-player" id="player5" src="./statics/profile(5).jpg" alt="آواتار بازیکن">
+        </div>
+        <!-- </div> -->
+</body>
+
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $(".myjdate").pDatepicker({
+        initialValueType: 'persian',
+        format: 'YYYY/MM/DD',
+        toolbox:{
+          calendarSwitch:{
+              enabled: false
+          }
+      },
+      maxDate: new persianDate().add('month', 1).valueOf(),
+      minDate: new persianDate().subtract('month', 0).valueOf(),
+      });
+
+      $('input[name="match-time"]').ptTimeSelect({
+        timeFormat: "HH:mm",
+        DefaultHr:      '18',         
+        DefaultMin:     '00',
+        DefaultAmPm:    'PM',
+        hoursLabel:     'ساعت',
+        minutesLabel:   'دقیقه',
+        setButtonLabel: 'تنظیم',
+
+      });
+    });
+    
+  </script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>فوتبالیستا</title>
+</head>
+
+<body>
+        {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+      {% endif %}
+      
+      {% if next %}
+        {% if user.is_authenticated %}
+          <p>Your account doesn't have access to this page. To proceed,
+          please login with an account that has access.</p>
+        {% else %}
+          <p>Please login to see this page.</p>
+        {% endif %}
+      {% endif %}
+    <div class="start-page">
+
+        <div class="row" style="height: 100vh;">
+            <img src="./statics/startpage.jpg" alt=""  srcset="" style=" object-fit: cover;">
+        </div>
+
+        <div class="row col-12 start-page-login-action">
+            <div class="col-1"></div>
+            <div class="col-10" style="text-align: center;">
+                    <div class="row" style="text-align: center; margin-top: 25px;">
+
+                           <p style="color: white; text-align: center;"> User Name:</p>
+                    </div>
+                <div class="row" style="text-align: center; margin-top: 0pxpx;">
+
+                        <input type="text">
+                </div>
+                <div class="row" style="text-align: center; margin-top: 25px;">
+
+                        <p style="color: white; text-align: center;"> User Name:</p>
+                 </div>
+                <div class="row "style="text-align: center; margin-top: 0px;">
+                        <input type="text">
+                </div>
+                
+                <div class="row "style="text-align: center; margin-top: 25px;">
+                        <button class="request-button">ثبت نام</button>
+                </div>
+
+                
+                
+               
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+    </div>
+</body>
+</html>
